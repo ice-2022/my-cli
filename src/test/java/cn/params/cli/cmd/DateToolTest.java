@@ -1,7 +1,6 @@
-package sub;
+package cn.params.cli.cmd;
 
-import cn.params.cli.sub.DateTool;
-import cn.params.cli.utils.TimeUtils;
+import cn.params.cli.util.TimeUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import picocli.CommandLine;

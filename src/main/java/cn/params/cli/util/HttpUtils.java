@@ -1,4 +1,4 @@
-package cn.params.cli.utils;
+package cn.params.cli.util;
 
 import java.net.URI;
 import java.net.http.HttpClient;

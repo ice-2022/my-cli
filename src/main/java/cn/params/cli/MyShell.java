@@ -1,9 +1,6 @@
 package cn.params.cli;
 
-import cn.params.cli.sub.DateTool;
-import cn.params.cli.sub.FindIPTool;
-import cn.params.cli.sub.IPTool;
-import cn.params.cli.sub.TimeTool;
+import cn.params.cli.cmd.*;
 import picocli.CommandLine;
 
 import java.util.concurrent.Callable;

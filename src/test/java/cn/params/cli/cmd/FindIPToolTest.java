@@ -1,6 +1,5 @@
-package sub;
+package cn.params.cli.cmd;
 
-import cn.params.cli.sub.FindIPTool;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import picocli.CommandLine;
