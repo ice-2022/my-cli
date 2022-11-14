@@ -3,12 +3,8 @@ package cn.params.cli.cmd;
 import cn.params.cli.util.TimeUtils;
 import picocli.CommandLine;
 
-import java.util.concurrent.Callable;
-
 @CommandLine.Command(name = "time", description = "get timestamp")
-public class TimeTool implements Callable<Integer> {
-    @CommandLine.Spec
-    CommandLine.Model.CommandSpec spec;
+public class TimeTool extends BaseTool {
 
     @CommandLine.Option(names = {"--date", "-d"}, description = "date format input(yyyy-MM-dd HH:mm:ss)")
     private String date;
@@ -21,7 +17,7 @@ public class TimeTool implements Callable<Integer> {
         } else {
             time = TimeUtils.time(date);
         }
-        spec.commandLine().getOut().println(time);
+        show(time);
         return 1;
     }
 }
