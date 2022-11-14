@@ -11,7 +11,17 @@ public class VersionProvider implements CommandLine.IVersionProvider {
     public String[] getVersion() throws Exception {
         File versionFile = new File("./resource/version.txt");
         if (!versionFile.exists()) {
-            versionFile = new File("../version.txt"); // brew
+            File home = new File("/opt/homebrew/Cellar/my");
+            for (File file : home.listFiles()) {
+                if (!file.isDirectory()) {
+                    continue;
+                }
+                String dirName = file.getName();
+                String[] tmp = dirName.split("\\.");
+                if (tmp.length == 3) {
+                    return new String[]{dirName};
+                }
+            }
         }
         Properties properties = new Properties();
         properties.load(new FileInputStream(versionFile));
