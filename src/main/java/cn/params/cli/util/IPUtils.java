@@ -12,7 +12,7 @@ public class IPUtils {
             NetworkInterface networkInterface = networkInterfaces.nextElement();
             for (InterfaceAddress interfaceAddress : networkInterface.getInterfaceAddresses()) {
                 if (interfaceAddress.getAddress().isSiteLocalAddress()) {
-                    return interfaceAddress.getAddress().getHostName();
+                    return interfaceAddress.getAddress().getHostAddress();
                 }
             }
         }
