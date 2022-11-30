@@ -1,15 +1,13 @@
 package cn.params.cli;
 
-import cn.params.cli.cmd.DateTool;
-import cn.params.cli.cmd.FindIPTool;
-import cn.params.cli.cmd.IPTool;
-import cn.params.cli.cmd.TimeTool;
+import cn.params.cli.cmd.*;
 import picocli.CommandLine;
 
 import java.util.concurrent.Callable;
 
 @CommandLine.Command(name = "my",
         subcommands = {
+                AmdahlLawTool.class,
                 IPTool.class,
                 FindIPTool.class,
                 DateTool.class,
